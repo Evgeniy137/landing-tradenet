@@ -108,10 +108,10 @@ body {
     font-size  : 4px;
 }
 
-ol,
+/* ol,
 ul {
     list-style: none;
-}
+} */
 
 blockquote,
 q {
@@ -172,6 +172,7 @@ table {
 body {
     background : #E5E5E5;
     font-family: 'Rubik', sans-serif;
+    font-weight: var(--font-w-400);
     font-size  : 4px;
 }
 
@@ -365,7 +366,7 @@ body {
     text-align    : center;
     font-size     : 10em;
     font-style    : normal;
-    font-weight   : var(--font-w-500);
+    font-weight   : var(--font-w-700);
     line-height   : 47px;
     letter-spacing: 0em;
     padding-top   : var(--padding-block);
@@ -378,12 +379,12 @@ body {
     justify-content: center;
 }
 
+
 .account-chat__item {
-    display: flex;
+    display      : flex;
     background   : #4C1ED3;
     box-shadow   : 10px 10px 20px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    margin-top: 40px;
 }
 
 .account-chat__text p {
@@ -392,12 +393,61 @@ body {
     font-weight   : var(--font-w-700);
     line-height   : 28px;
     letter-spacing: 0em;
+    padding       : 50px 0 20px 0;
 }
- 
-.account-chat__plus {
+
+.account-chat__text ul li {
+    text-align    : left;
+    color         : var(--color-white);
+    font-size     : var(--font-s-20);
+    font-weight   : var(--font-w-400);
+    line-height   : 24px;
+    letter-spacing: 0em;
+    padding-bottom: 15px;
+    max-width     : 260px;
+    /* list-style : inside */
+}
+
+/* ===== account */
+.account-chat__account {
+    justify-content: space-between;
+    flex           : 1;
+}
+
+.account__text ul {
+    padding-left: 57px;
+}
+
+.account__text p {
+    text-align  : left;
+    padding-left: 40px;
+}
+
+.account-chat__image {
     align-self: center;
 }
 
+/* ===== chat */
+.account-chat__chat {
+    flex-direction : row-reverse;
+    flex           : 1;
+    justify-content: flex-end;
+
+}
+
+.chat__text {
+    padding-bottom: 50px;
+}
+
+.chat__text ul {
+    padding-left: 30px;
+}
+
+/* ===== all */
+.account-chat__plus {
+    align-self: center;
+    margin    : 0 20px;
+}
 
 .account-chat__price {
     color         : var(--color-green);
@@ -405,6 +455,7 @@ body {
     font-weight   : var(--font-w-700);
     line-height   : 38px;
     letter-spacing: 0em;
+    margin-top    : 40px;
 }
 
 .account-chat__desc {
@@ -419,6 +470,95 @@ body {
 
 
 /* =========  block-form ========= */
+.form {
+    background: linear-gradient(0deg, #5E19CE 0%, #4021D6 100%);
+}
+
+.form__title {
+    font-size     : var(--font-s-24);
+    font-weight   : var(--font-w-700);
+    color         : var(--color-white);
+    line-height   : 28px;
+    letter-spacing: 0em;
+    max-width     : 325px;
+    margin        : 0 auto;
+    text-align    : center;
+    padding       : 60px 0 40px 0;
+}
+
+.form__container {
+    background   : var(--color-white);
+    box-shadow   : 4px 4px 40px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    max-width    : 673px;
+    margin       : 0 auto;
+}
+
+.form__container-title {
+    max-width     : 410px;
+    font-size     : var(--font-s-16);
+    font-weight   : var(--font-w-500);
+    color         : #F80303;
+    line-height   : 19px;
+    letter-spacing: 0em;
+    text-align    : center;
+    margin        : 0 auto;
+    padding       : 20px 0;
+}
+
+.form__block {
+    display        : flex;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+}
+
+/* ===== input */
+.form__block input {
+    border       : 1px solid #DADADA;
+    box-sizing   : border-box;
+    border-radius: 10px;
+    max-width: 300px;
+    min-width: 250px;
+    height: ;
+}
+
+.form__block input::placeholder {
+    font-weight   : var(--font-w-400);
+    font-size     : 12px;
+    line-height   : 23px;
+    letter-spacing: 0em;
+    padding-top: 30px;
+}
+
+
+/* ===== button */
+.form__block button {
+    background   : rgb(255, 132, 79);
+    height       : 56px;
+    width        : 184px;
+    border-radius: 5px;
+    margin-top   : 40px;
+    font-size    : var(--font-s-20);
+    color        : var(--color-white);
+    transition   : .5s;
+    cursor       : pointer;
+}
+
+.form__block button:hover {
+    background: rgb(255, 153, 79);
+    box-shadow: 0px 0px 20px rgba(255, 163, 79, 0.5);
+}
+
+.form__block button:focus {
+    background: rgb(255, 153, 79);
+    box-shadow: 0px 0px 20px rgba(255, 163, 79, 0.5);
+}
+
+.form__block button:active {
+    background: rgb(255, 153, 79);
+    box-shadow: 0px 0px 20px rgba(10, 10, 10, 0.5);
+}
+
 /* ========= ///// block-form ========= */
 
 
