@@ -1,0 +1,23 @@
+{
+  "name": "landing-tradenet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "intl-tel-input": "^17.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evgeniy137/landing-tradenet.git"
+  },
+  "author": "Sliozka Evgeniy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evgeniy137/landing-tradenet/issues"
+  },
+  "homepage": "https://github.com/Evgeniy137/landing-tradenet#readme"
+}
