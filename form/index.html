@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.css">
     <link rel="stylesheet" href="./style/style.css">
-    <script src="./js/intlTelInput.js"></script>
-    
+
+
 </head>
 
 <body>
@@ -16,14 +18,32 @@
         <input name="key1" id="input" type="text">
         <input name="key2" id="input" type="text">
         <input name="key3" id="input" type="text">
+
+
+
         <input id="phone" type="tel">
-        <span id="valid-msg" class="hide">✓ Valid</span>
-        <span id="error-msg" class="hide"></span>
+
+
+
         <input type="submit">
     </form>
-    <!-- <script src="./js/intlTelInput.js"></script> -->
-    <script src="./js/jq.min.js"></script>
-    <script src="./js/scripts.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            initialCountry: "auto",
+            geoIpLookup: function (callback) {
+                $.get('https://ipinfo.io', function () { }, "jsonp").always(function (resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "us";
+                    callback(countryCode);
+                });
+            },
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js"
+        })
+    </script>
+
+
 
 
 
