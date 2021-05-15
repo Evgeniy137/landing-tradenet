@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "intl-tel-input": "^17.0.12"
   },
   "devDependencies": {},
