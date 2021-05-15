@@ -474,6 +474,10 @@ body {
     background: linear-gradient(0deg, #5E19CE 0%, #4021D6 100%);
 }
 
+.form__padding {
+    padding-bottom: 60px;
+}
+
 .form__title {
     font-size     : var(--font-s-24);
     font-weight   : var(--font-w-700);
@@ -490,7 +494,7 @@ body {
     background   : var(--color-white);
     box-shadow   : 4px 4px 40px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    max-width    : 673px;
+    max-width    : 672px;
     margin       : 0 auto;
 }
 
@@ -508,36 +512,81 @@ body {
 
 .form__block {
     display        : flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap      : wrap;
 }
 
 /* ===== input */
-.form__block input {
+.form__input {
+    flex         : 50%;
     border       : 1px solid #DADADA;
     box-sizing   : border-box;
     border-radius: 10px;
-    max-width: 300px;
-    min-width: 250px;
-    height: ;
+    max-width    : 300px;
+    height       : 38px;
+    margin       : 12px;
 }
+
+.form__checkbox {
+    display: flex;
+    margin : 12px 24px;
+}
+
+.form__checkbox input {
+    min-width: 20px;
+    height   : 20px;
+    margin   : 0;
+
+}
+
+.form__checkbox p {
+    font-size     : 10px;
+    font-weight   : 300;
+    line-height   : 13px;
+    letter-spacing: 0.05em;
+    padding-left  : 20px;
+    color         : #ABABAB;
+}
+
+.form__checkbox p a {
+    font-weight: 600;
+    color      : var(--color-black)
+}
+
+.form__checkbox p a:hover {
+    transition: .5s;
+    color     : #FF844F;
+}
+
+.form__checkbox p a:active {
+    transition: .5s;
+    color     : var(--color-white)
+}
+
+
+
+
 
 .form__block input::placeholder {
     font-weight   : var(--font-w-400);
     font-size     : 12px;
     line-height   : 23px;
     letter-spacing: 0em;
-    padding-top: 30px;
+    /* padding-left: 17px; */
+}
+.form__block input {
+    padding-left: 17px;
 }
 
 
 /* ===== button */
 .form__block button {
-    background   : rgb(255, 132, 79);
+    background   : #FF844F;
     height       : 56px;
     width        : 184px;
     border-radius: 5px;
-    margin-top   : 40px;
+    margin-top   : 8px;
+    margin-bottom: 20px;
     font-size    : var(--font-s-20);
     color        : var(--color-white);
     transition   : .5s;
@@ -545,7 +594,7 @@ body {
 }
 
 .form__block button:hover {
-    background: rgb(255, 153, 79);
+    background: #FF994F;
     box-shadow: 0px 0px 20px rgba(255, 163, 79, 0.5);
 }
 
@@ -563,8 +612,127 @@ body {
 
 
 /* =========  block-text ========= */
+.text {
+    background: #FFF0E6;
+}
+
+.text__block {
+    font-size     : var(--font-s-16);
+    font-weight   : 300;
+    line-height   : 19px;
+    letter-spacing: 0em;
+    padding       : 40px 0;
+}
+
 /* ========= ///// block-text ========= */
 
 
 /* =========  block-footer ========= */
+.footer {
+    background: #394046;
+
+}
+
+.footer__links {
+    display        : flex;
+    justify-content: space-between;
+    padding-top    : 65px;
+}
+
+.footwr__links--item {
+    color: var(--color-white);
+
+}
+
+.footwr__links--item ul li {
+    font-size     : var(--font-s-14);
+    list-style    : none;
+    padding-bottom: 6px;
+    font-weight   : 400;
+
+}
+
+.footwr__links--item ul li a {
+    display   : flex;
+    transition: .5s;
+    fill      : white;
+}
+
+.footwr__links--item ul li a:hover {
+    transition: .5s;
+    color     : #FF844F;
+    fill      : #FF844F;
+
+}
+
+.footwr__links--item ul li h4 {
+    font-size     : 20px;
+    padding-bottom: 4px;
+    font-weight   : 400;
+}
+
+.footer__svg {
+    padding-right: 10px;
+}
+
+.footer__svg path {
+    padding-right: 10px;
+}
+
+.social ul {
+    display: flex;
+}
+
+.footer__pay {
+    text-align    : right;
+    padding-top   : 15px;
+    padding-bottom: 20px;
+}
+
+.footer__line {
+    width     : 100%;
+    height    : 2px;
+    background: var(--color-white);
+}
+
+.footer__text {
+    padding-top: 48px;
+}
+
+.footer__text p {
+    font-size     : var(--font-s-16);
+    font-weight   : var(--font-w-400);
+    color: var(--color-white);
+    line-height   : 25px;
+    letter-spacing: 0.01em;
+    padding-bottom: 30px;
+}
+
+.footer__privacy {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0 64px 0;
+}
+.footer__privacy-img {
+    max-width: 94px;
+}
+.footer__privacy-link a{
+    font-size     : var(--font-s-14);
+    font-weight   : var(--font-w-400);
+    color: var(--color-white);
+    line-height: 17px;
+    letter-spacing: 0em;
+    padding-left: 22px;
+}
+.footer__privacy-link  a:hover{
+    transition: .5s;
+    color     : #FF844F;
+
+}
+.footer__privacy-link  a:active{
+    transition: .5s;
+    color     : var(--color-white);
+
+}
+
 /* ========= ///// block-footer ========= */
